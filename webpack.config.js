@@ -11,7 +11,7 @@ module.exports = (env) => {
         },
         output: {
             filename: "[name].[chunkhash].js",
-            path: path.join(__dirname, "/dist")
+            path: path.join(__dirname, "/docs")
         },
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx'],
