@@ -27,7 +27,7 @@ class App extends React.Component {
     public render() {
         return (
             <div>
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <div>
                         <Header />
                         <Switch>
