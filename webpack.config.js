@@ -45,6 +45,11 @@ module.exports = (env) => {
                 title: "Hello React",
                 template: "index.html"
             }),
+            new HtmlWebpackPlugin({
+                title: "404",
+                template: "404.html",
+                filename: "404.html"
+            }),
             new webpack.HashedModuleIdsPlugin({
                 hashFunction: "sha256"
             }),

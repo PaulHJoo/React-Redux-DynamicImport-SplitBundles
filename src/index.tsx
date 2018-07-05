@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter, Switch, Route, HashRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import DynamicImport from "./components/dynamic-import";
 import Header from "../src/components/header";
 import AboutPage from "./pages/about";
@@ -27,7 +27,7 @@ class App extends React.Component {
     public render() {
         return (
             <div>
-                <HashRouter basename={process.env.PUBLIC_URL}>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <div>
                         <Header />
                         <Switch>
@@ -35,7 +35,7 @@ class App extends React.Component {
                             <Route path="/about" component={this.About} />
                         </Switch>
                     </div>
-                </HashRouter>
+                </BrowserRouter>
             </div>
         );
     }
