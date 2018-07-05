@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import DynamicImport from "./components/dynamic-import";
 import Header from "../src/components/header";
 import AboutPage from "./pages/about";
+import PageNotFound from "./pages/404";
 import { configureStore } from "./store/configureStore";
 
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={this.Home} />
                             <Route path="/about" component={this.About} />
+                            <Route component={PageNotFound} />
                         </Switch>
                     </div>
                 </BrowserRouter>
